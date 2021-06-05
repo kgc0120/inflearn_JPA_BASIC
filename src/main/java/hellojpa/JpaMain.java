@@ -38,6 +38,6 @@ public class JpaMain {
             entityManager.close(); // database connection을 물고 동작하기 때문에 꼭 닫아줘야한다.
         }
         emf.close();
-
+        // ssh test
     }
 }
