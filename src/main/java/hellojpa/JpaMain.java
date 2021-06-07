@@ -17,19 +17,24 @@ public class JpaMain {
         transaction.begin();
 
         try {
-//            // 객체를 생선한 상태(비영속)
-            Member member = new Member(240L, "A");
-            Member member2 = new Member(250L, "B");
-            Member member3 = new Member(260L, "C");
 
-
+            Member member = new Member();
             entityManager.persist(member);
-            entityManager.persist(member2);
-            entityManager.persist(member3);
 
-            List<Member> members = entityManager.createQuery("select m from Member m", Member.class).getResultList();
-//
-            System.out.println("=============");
+
+//            // 객체를 생선한 상태(비영속)
+//            Member member = new Member(240L, "A");
+//            Member member2 = new Member(250L, "B");
+//            Member member3 = new Member(260L, "C");
+
+//            entityManager.persist(member);
+//            entityManager.persist(member2);
+//            entityManager.persist(member3);
+
+
+//            List<Member> members = entityManager.createQuery("select m from Member m", Member.class).getResultList();
+////
+//            System.out.println("=============");
 //            for (Member member1 : members) {
 //                System.out.println(member1.getName());
 //            }
